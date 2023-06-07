@@ -53,9 +53,14 @@ AppAsset::register($this);
                       <ul class="rd-navbar-nav">
                         <li class="rd-nav-item active"><a class="rd-nav-link" href="/">Домой</a></li>
                         <? if (!Yii::$app->user->isGuest) { ?>
-                            <a style="margin-left: 5px; margin-right: 5px;" class="rd-nav-link" href="/task/user">Мои задачи</a>
+                          <li class="rd-nav-item">
+                            <a class="rd-nav-link user" href="/task/user">Мои задачи</a>
+                          </li>  
                        <? } ?>
-                        <li class="rd-nav-item"><a class="rd-nav-link" href="/labor-costs">Создание трудозатрат</a></li>
+
+                        <li class="rd-nav-item"><a class="rd-nav-link costs" href="/labor-costs">Создание трудозатрат</a></li>
+
+                        <li class="rd-nav-item"><a class="rd-nav-link task" href="/task/user">Создание задачи</a>  </li>
                         <li class="rd-nav-item">
                         <? if (!Yii::$app->user->isGuest) { ?>
                                 <a><?= Html::a(
